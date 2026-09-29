@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation sur HTML — Hanane azouz</title>
+  <meta name="description" content="Présentation complète et structurée sur le langage HTML par Hanane azouz avec support bilingue (Français / العربية).">
+  <meta property="og:title" content="Présentation sur HTML — Hanane azouz">
+  <meta property="og:description" content="Présentation complète et structurée sur le langage HTML par Hanane azouz.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <meta name="theme-color" content="#0b0d13">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+  <!-- Ambient background glow elements for realistic glassmorphism depth -->
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-glow-secondary" aria-hidden="true"></div>
+
+  <!-- Top bar with brand & mechanical language toggle -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="site-badge">
+        <span class="badge-dot"></span>
+        <span data-key="siteBadge">Présentation Web</span>
+      </div>
+
+      <!-- Language Switcher using the requested mechanical toggle design -->
+      <div class="language-selector" title="Changer de langue / تغيير اللغة">
+        <span class="lang-label active" id="lang-fr-label">FR</span>
+        <div class="toggle-wrapper">
+          <input type="checkbox" class="toggle-checkbox" id="language-toggle" aria-label="Changer de langue">
+          <div class="toggle-container">
+            <div class="toggle-button">
+              <div class="toggle-button-circles-container">
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+                <div class="toggle-button-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="lang-label" id="lang-ar-label">العربية</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Presentation Content (exact order & headings from the original slides) -->
+  <main class="main-content">
+
+    <!-- Page 1: Titre & Auteur -->
+    <header class="hero-card fade-in">
+      <h1 class="hero-title" data-key="heroTitle">Présentation sur HTML</h1>
+      <p class="hero-author" data-key="heroAuthor">Hanane azouz</p>
+    </header>
+
+    <!-- Page 2: C’est quoi HTML ? -->
+    <section class="content-section">
+      <h2 class="section-title" data-key="section1Title">C’est quoi HTML ?</h2>
+      <p class="section-text" data-key="section1P1">
+        HTML signifie HyperText Markup Language. C’est le langage utilisé pour créer et structurer les pages web. Avec HTML, on peut ajouter :
+      </p>
+      <ul class="content-list">
+        <li data-key="section1List1">Des titres</li>
+        <li data-key="section1List2">Des paragraphes</li>
+        <li data-key="section1List3">Des images</li>
+        <li data-key="section1List4">Des liens</li>
+        <li data-key="section1List5">Des listes</li>
+        <li data-key="section1List6">Des tableaux</li>
+      </ul>
+    </section>
+
+    <!-- Page 3: À quoi sert HTML ? -->
+    <section class="content-section">
+      <h2 class="section-title" data-key="section2Title">À quoi sert HTML ?</h2>
+      <p class="section-text" data-key="section2P1">
+        HTML permet de définir la structure d’une page web
+      </p>
+      <p class="section-text" data-key="section2P2">
+        Par exemple :.
+      </p>
+      <ul class="content-list">
+        <li data-key="section2List1">Le titre de la page</li>
+        <li data-key="section2List2">le contenu</li>
+        <li data-key="section2List3">les images</li>
+        <li data-key="section2List4">Les liens</li>
+        <li data-key="section2List5">Les différentes sections</li>
+      </ul>
+      <div class="highlight-box" data-key="section2Summary">
+        HTML = Structure de la page web
+      </div>
+    </section>
+
+    <!-- Page 4: Structure d’une page HTML: -->
+    <section class="content-section">
+      <h2 class="section-title" data-key="section3Title">Structure d’une page HTML:</h2>
+      <p class="section-text" data-key="section3P1">
+        Structure d’une page HTML:
+      </p>
+
+      <!-- Code Card 1: Structure -->
+      <div class="code-card">
+        <div class="code-header">
+          <div class="code-header-left">
+            <div class="window-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="code-title">index.html</span>
+          </div>
+          <div class="code-actions">
+            <button class="preview-button" data-target="code-structure" aria-label="Aperçu du code">
+              <svg class="preview-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span class="preview-text" data-key="previewBtn">Aperçu</span>
+            </button>
+            <button class="copy-button" data-target="code-structure" aria-label="Copier le code">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              <span class="copy-text" data-key="copyBtn">Copier</span>
+            </button>
+          </div>
+        </div>
+        <div class="code-display-area">
+          <pre class="code-body"><code id="code-structure" class="code-text-target"></code><span class="typing-cursor">|</span></pre>
+          <div class="code-preview-pane" id="preview-code-structure" style="display: none;">
+            <div class="preview-mini-bar">
+              <span class="preview-indicator-dot"></span>
+              <span data-key="previewLiveBanner">Rendu dans le navigateur</span>
+            </div>
+            <iframe class="preview-iframe" title="Aperçu HTML"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 5: Les balises HTML: -->
+    <section class="content-section">
+      <h2 class="section-title" data-key="section4Title">Les balises HTML:</h2>
+      <p class="section-text" data-key="section4P1">
+        HTML utilise des balises pour organiser le contenu.
+      </p>
+      <p class="section-text" data-key="section4P2">
+        Quelques exemples :
+      </p>
+      <ul class="content-list">
+        <li>
+          <span class="tag-badge">&lt;h1&gt;</span> : <span data-key="section4Desc1">titre principal</span>
+        </li>
+        <li>
+          <span class="tag-badge">&lt;p&gt;</span> : <span data-key="section4Desc2">paragraphe</span>
+        </li>
+        <li>
+          <span class="tag-badge">&lt;img&gt;</span> : <span data-key="section4Desc3">image</span>
+        </li>
+        <li>
+          <span class="tag-badge">&lt;a&gt;</span> : <span data-key="section4Desc4">lien</span>
+        </li>
+        <li>
+          <span class="tag-badge">&lt;ul&gt;</span> : <span data-key="section4Desc5">liste</span>
+        </li>
+        <li>
+          <span class="tag-badge">&lt;table&gt;</span> : <span data-key="section4Desc6">tableau</span>
+        </li>
+      </ul>
+
+      <!-- Code Card 2: Balises HTML (Directly illustrates the balises listed above) -->
+      <div class="code-card">
+        <div class="code-header">
+          <div class="code-header-left">
+            <div class="window-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="code-title">balises.html</span>
+          </div>
+          <div class="code-actions">
+            <button class="preview-button" data-target="code-balises" aria-label="Aperçu du code">
+              <svg class="preview-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span class="preview-text" data-key="previewBtn">Aperçu</span>
+            </button>
+            <button class="copy-button" data-target="code-balises" aria-label="Copier le code">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              <span class="copy-text" data-key="copyBtn">Copier</span>
+            </button>
+          </div>
+        </div>
+        <div class="code-display-area">
+          <pre class="code-body"><code id="code-balises" class="code-text-target"></code><span class="typing-cursor">|</span></pre>
+          <div class="code-preview-pane" id="preview-code-balises" style="display: none;">
+            <div class="preview-mini-bar">
+              <span class="preview-indicator-dot"></span>
+              <span data-key="previewLiveBanner">Rendu dans le navigateur</span>
+            </div>
+            <iframe class="preview-iframe" title="Aperçu HTML"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 6: Exemple simple: -->
+    <section class="content-section">
+      <h2 class="section-title" data-key="section5Title">Exemple simple:</h2>
+
+      <!-- Code Card 3: Exemple simple -->
+      <div class="code-card">
+        <div class="code-header">
+          <div class="code-header-left">
+            <div class="window-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="code-title">exemple.html</span>
+          </div>
+          <div class="code-actions">
+            <button class="preview-button" data-target="code-example" aria-label="Aperçu du code">
+              <svg class="preview-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span class="preview-text" data-key="previewBtn">Aperçu</span>
+            </button>
+            <button class="copy-button" data-target="code-example" aria-label="Copier le code">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              <span class="copy-text" data-key="copyBtn">Copier</span>
+            </button>
+          </div>
+        </div>
+        <div class="code-display-area">
+          <pre class="code-body"><code id="code-example" class="code-text-target"></code><span class="typing-cursor">|</span></pre>
+          <div class="code-preview-pane" id="preview-code-example" style="display: none;">
+            <div class="preview-mini-bar">
+              <span class="preview-indicator-dot"></span>
+              <span data-key="previewLiveBanner">Rendu dans le navigateur</span>
+            </div>
+            <iframe class="preview-iframe" title="Aperçu HTML"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-text" data-key="section5P1">
+        Ce code permet d’afficher un titre, un paragraphe et un lien.
+      </p>
+    </section>
+
+    <!-- Page 7: HTML, CSS et JavaScript: -->
+    <section class="content-section">
+      <h2 class="section-title" data-key="section6Title">HTML, CSS et JavaScript:</h2>
+      <p class="section-text" data-key="section6P1">
+        Pour créer un site web complet, on utilise souvent trois technologies
+      </p>
+
+      <div class="tech-triad">
+        <div class="tech-item">
+          <div class="tech-name">HTML &rarr;</div>
+          <div class="tech-role" data-key="tech1Role">structure</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">CSS &rarr;</div>
+          <div class="tech-role" data-key="tech2Role">design et couleurs</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-name">JavaScript &rarr;</div>
+          <div class="tech-role" data-key="tech3Role">interactions et fonctionnalités</div>
+        </div>
+      </div>
+
+      <div class="house-metaphor">
+        <p class="house-metaphor-title" data-key="houseTitle">On peut les comparer à une maison :</p>
+        <div class="house-grid">
+          <div class="house-item" data-key="house1">HTML = structure</div>
+          <div class="house-item" data-key="house2">CSS = décoration</div>
+          <div class="house-item" data-key="house3">JavaScript = fonctionnement</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 8: Les avantages de HTML: -->
+    <section class="content-section">
+      <h2 class="section-title" data-key="section7Title">Les avantages de HTML:</h2>
+      <ul class="content-list">
+        <li data-key="section7List1">Facile à apprendre</li>
+        <li data-key="section7List2">Gratuit et accessible</li>
+        <li data-key="section7List3">Compatible avec les navigateurs web</li>
+        <li data-key="section7List4">Utilisé dans la création des sites web</li>
+        <li data-key="section7List5">Fonctionne avec CSS et JavaScript</li>
+      </ul>
+    </section>
+
+    <!-- Page 9: Conclusion: -->
+    <section class="content-section">
+      <h2 class="section-title" data-key="section8Title">Conclusion:</h2>
+      <p class="section-text" data-key="section8P1">
+        HTML est un langage essentiel dans le développement web.
+      </p>
+      <p class="section-text" data-key="section8P2">
+        Il permet de structurer le contenu d’une page web et constitue généralement la première étape pour apprendre le développement web.
+      </p>
+    </section>
+
+    <!-- Page 10: Merci pour votre attention ! -->
+    <section class="closing-card">
+      <h2 class="closing-text" data-key="section9Title">Merci pour votre attention !</h2>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p data-key="footerText">Hanane azouz &bull; Présentation sur HTML</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
